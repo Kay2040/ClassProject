@@ -1,151 +1,242 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua Shop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <link rel="stylesheet" href="../css/ca.css">
+  <title>Aqua Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+  <header>
 
-    <header>
+    <div class="container">
 
-        <div class="container nav">
+      <nav>
 
-            <div class="logo">
+        <div class="logo">
+          <i class="fa-solid fa-water"></i>
+          Harry Aqua
+        </div>
 
-                <i class="fa-solid fa-water"></i>
+        <div class="menu">
+          <a href="/index.html">Trang chủ</a>
+          <a href="/html/Canuocman.html">Cá nước mặn</a>
+          <a href="/html/Canuocngot.html" class="active">Cá nước ngọt</a>
+          <a href="/html/lienhe.html">Liên hệ</a>
+          <a href="/html/labth.html">Lab thực hành</a>
+        </div>
 
-                <span>Aqua Shop</span>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
 
+      </nav>
+
+    </div>
+
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Dòng cá nước ngọt với những loài cá quen thuộc dễ nuôi</h1>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <h2 class="title">Sản phẩm nổi bật</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../imgs/betta.jpeg">
+          <div class="product-content">
+            <h3>Betta (Cá xiêm)</h3>
+            <p>Cá Betta nổi tiếng với bộ vây dài mềm mại và màu sắc rất đa dạng.</p>
+
+            <div class="product-footer">
+              <span class="price">30.000 đ</span>
+              <button class="btn-add">Thêm</button>
             </div>
 
-            <ul class="menu">
-
-                <li>
-                    <a href="index.html"
-                       class="active">
-                        Cá ngọt
-                    </a>
-                </li>
-
-                <li>
-                    <a href="ca-man.html">
-                        Cá mặn
-                    </a>
-                </li>
-
-                <li>
-                    <a href="lien-he.html">
-                        Liên hệ
-                    </a>
-                </li>
-
-                <li>
-                    <a href="lab.html">
-                        Lab thực hành
-                    </a>
-                </li>
-
-            </ul>
-
-            <div class="cart">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-            </div>
+          </div>
 
         </div>
 
-    </header>
+        <div class="product-card">
 
-    <section class="hero freshwater">
+            <img src="../imgs/neon_tetra.jpg">
+          <div class="product-content">
 
-        <i class="fa-solid fa-fish hero-icon"></i>
+            <h3>Neon Tetra</h3>
 
-        <h1>Cá Cảnh Nước Ngọt</h1>
+            <p>Neon Tetra có sọc xanh đỏ phát sáng đẹp mắt khi nuôi theo đàn.</p>
 
-        <p>
-            Vẻ đẹp thanh tao của thiên nhiên
-        </p>
+            <div class="product-footer">
+              <span class="price">20.000 đ</span>
+              <button class="btn-add">Thêm</button>
+            </div>
 
-    </section>
-
-
-    <section class="products container">
-
-        <div class="section-title">
-
-            <h2>Danh sách cá cảnh</h2>
+          </div>
 
         </div>
 
-        <div class="product-grid">
+        <div class="product-card">
 
-            <div class="card">
+          <img src="../imgs/guppy.webp">
 
-                <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=1000"
-                     alt="">
+          <div class="product-content">
 
-                <div class="card-body">
+            <h3>Guppy (cá bảy màu)</h3>
 
-                    <h3>Cá Betta</h3>
+            <p>Guppy là loài cá nhỏ dễ nuôi với đuôi nhiều màu sắc sặc sỡ.</p>
 
-                    <p>
-                        Cá betta đẹp với màu sắc nổi bật.
-                    </p>
-
-                    <div class="card-footer">
-
-                        <span>250.000 đ</span>
-
-                        <button>
-                            Thêm
-                        </button>
-
-                    </div>
-
-                </div>
-
+            <div class="product-footer">
+              <span class="price">20.000 đ</span>
+              <button class="btn-add">Thêm</button>
             </div>
 
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000"
-                     alt="">
-
-                <div class="card-body">
-
-                    <h3>Cá Guppy</h3>
-
-                    <p>
-                        Loài cá nhỏ dễ nuôi cho người mới.
-                    </p>
-
-                    <div class="card-footer">
-
-                        <span>45.000 đ</span>
-
-                        <button>
-                            Thêm
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
+          </div>
 
         </div>
 
-    </section>
+        <div class="product-card">
+
+          <img src="../imgs/angel_fish.webp">
+
+          <div class="product-content">
+
+            <h3>Angelfish (Cá ông tiên)</h3>
+
+            <p>Moorish Idol có dáng bơi thanh mảnh với sọc trắng đen và vây lưng kéo dài đặc trưng.</p>
+
+            <div class="product-footer">
+              <span class="price">20.000 đ</span>
+              <button class="btn-add">Thêm</button>
+            </div>
+
+          </div>
+          
+        </div>
+                <div class="product-card">
+
+          <img src="../imgs/discus.jpg">
+
+          <div class="product-content">
+
+            <h3>Discus</h3>
+
+            <p>Discus được mệnh danh là “vua cá cảnh nước ngọt” nhờ hình dáng tròn đẹp và màu sắc nổi bật.</p>
+
+            <div class="product-footer">
+              <span class="price">100.000 đ</span>
+              <button class="btn-add">Thêm</button>
+            </div>
+
+          </div>
+
+        </div>
+
+            <div class="product-card">
+
+          <img src="../imgs/Corydoras.jpg">
+
+          <div class="product-content">
+
+            <h3>Corydoras</h3>
+
+            <p>Corydoras là loài cá đáy hiền lành giúp dọn thức ăn thừa trong bể.</p>
+
+            <div class="product-footer">
+              <span class="price">50.000 đ</span>
+              <button class="btn-add">Thêm</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="product-card">
+
+          <img src="../imgs/Arowana.jpg">
+
+          <div class="product-content">
+
+            <h3>Arowana (Cá rồng)</h3>
+
+            <p>Cá rồng có thân dài ánh kim và thường được xem là biểu tượng phong thủy may mắn.</p>
+
+            <div class="product-footer">
+              <span class="price">780.000 đ</span>
+              <button class="btn-add">Thêm</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="product-card">
+
+          <img src="../imgs/zebra_danio.webp">
+
+          <div class="product-content">
+
+            <h3>Zebra Danio</h3>
+
+            <p>Zebra Danio là loài cá nhỏ bơi nhanh với các sọc ngang giống ngựa vằn.</p>
+
+            <div class="product-footer">
+              <span class="price">780.000 đ</span>
+              <button class="btn-add">Thêm</button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+      
+
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">Aqua Shop</h3>
+          <p>
+            Aqua Shop - đồ án website bán Cá cảnh cuối kì môn học thực hành nhập môn web
+          </p>
+        </div>
+        
+
+        <div>
+          <h3 class="footer-title">Liên hệ</h3>
+          <div class="footer-contact">
+            <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
+            <p><i class="fa-solid fa-envelope"></i> dh52300848@student.stu.edu.vn</p>
+            <p><i class="fa-solid fa-location-dot"></i> 108 Cao Lỗ, Q.8, TP.HCM</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2025 Aqua Shop. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
-
 </html>

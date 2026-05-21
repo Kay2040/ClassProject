@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eef7f8;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+header {
+    background: linear-gradient(
+        90deg,
+        #00838f,
+        #00acc1
+    );
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #dff9fb;
+}
+
+.menu a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 6px;
+}
+
+
+.hero {
+    height: 280px;
+
+    background: linear-gradient(
+        135deg,
+        #00bcd4,
+        #0097a7
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
+
+.labs {
+    padding: 70px 0;
+}
+
+.lab-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.lab-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 10px 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.lab-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.lab-icon {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 18px;
+
+    background: #dff9fb;
+    color: #0097a7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+
+    margin-bottom: 22px;
+}
+
+.lab-card h2 {
+    color: #0097a7;
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+}
+
+.lab-card p {
+    color: #555;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+.lab-card button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #0097a7,
+        #00bcd4
+    );
+
+    color: white;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.lab-card button:hover {
+    transform: scale(1.03);
+
+    opacity: 0.9;
+}
+
+footer{
+  background:#006d75;
+  color:white;
+  padding:60px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:40px;
+  margin-bottom:40px;
+}
+
+.footer-title{
+  margin-bottom:20px;
+  font-size:20px;
+}
+
+.footer-links a{
+  display:block;
+  color:#dbecec;
+  margin-bottom:10px;
+}
+
+.footer-contact p{
+  margin-bottom:10px;
+  color:#dbecec;
+}
+@media (max-width: 1100px) {
+
+    .lab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .nav {
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 20px 0;
+
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .lab-grid {
+        grid-template-columns: 1fr;
+    }
+    
+
+}
