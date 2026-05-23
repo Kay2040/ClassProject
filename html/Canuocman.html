@@ -34,9 +34,10 @@
           <a href="../html/labth.html">Lab thực hành</a>
         </div>
 
-        <div class="cart">
+        <a href="../html/giohang.html" class="cart">
           <i class="fa-solid fa-cart-shopping"></i>
-        </div>
+          <span id="cart-count">0</span>
+        </a>
 
       </nav>
 
@@ -62,7 +63,7 @@
 
             <div class="product-footer">
               <span class="price">350.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Ocellaris Clownfish', 350000)">Thêm</button>
             </div>
 
           </div>
@@ -80,7 +81,7 @@
 
             <div class="product-footer">
               <span class="price">200.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Blue Tang', 200000)">Thêm</button>
             </div>
 
           </div>
@@ -99,7 +100,7 @@
 
             <div class="product-footer">
               <span class="price">780.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Yellow Tang', 780000)">Thêm</button>
             </div>
 
           </div>
@@ -118,7 +119,7 @@
 
             <div class="product-footer">
               <span class="price">20.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Moorish Idol', 20000)">Thêm</button>
             </div>
 
           </div>
@@ -136,7 +137,7 @@
 
             <div class="product-footer">
               <span class="price">780.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Mandarin Dragonet', 780000)">Thêm</button>
             </div>
 
           </div>
@@ -155,7 +156,7 @@
 
             <div class="product-footer">
               <span class="price">780.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Royal Gramma', 780000)">Thêm</button>
             </div>
 
           </div>
@@ -173,7 +174,7 @@
 
             <div class="product-footer">
               <span class="price">780.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Flame Angelfish', 780000)">Thêm</button>
             </div>
 
           </div>
@@ -191,7 +192,7 @@
 
             <div class="product-footer">
               <span class="price">780.000 đ</span>
-              <button class="btn-add">Thêm</button>
+              <button class="btn-add" onclick="addToCart('Banggai Cardinalfish', 780000)">Thêm</button>
             </div>
 
           </div>
@@ -236,6 +237,6 @@
     </div>
 
   </footer>
-
+<script src="../js/add.js"></script>
 </body>
 </html>

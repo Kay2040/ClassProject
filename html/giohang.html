@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giỏ hàng</title>
+
+    <link rel="stylesheet" href="../css/giohang.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container">
+
+            <nav>
+
+                <div class="logo">
+                    <i class="fa-solid fa-water"></i>
+                    Harry Aqua
+                </div>
+
+                <div class="menu">
+
+                    <a href="../index.html">Trang chủ</a>
+
+                    <a href="../html/Canuocman.html">
+                        Cá nước mặn
+                    </a>
+
+                    <a href="../html/canuocngot.html">
+                        Cá nước ngọt
+                    </a>
+
+                    <a href="../html/lienhe.html">
+                        Liên hệ
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="cart-page">
+
+        <div class="container">
+
+            <h1 class="cart-title">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Giỏ hàng của bạn
+            </h1>
+
+            <div class="cart-layout">
+
+                <div class="cart-left">
+
+                    <div class="cart-header">
+
+                        <span>Sản phẩm</span>
+                        <span>Đơn giá</span>
+                        <span>Số lượng</span>
+                        <span>Thành tiền</span>
+
+                    </div>
+
+                    <div class="cart-items"></div>
+
+                    <div class="cart-buttons">
+
+                        <a href="../index.html" class="continue-btn">
+                            ← Tiếp tục mua sắm
+                        </a>
+
+                        <button class="clear-btn" onclick="clearCart()">
+
+                            <i class="fa-solid fa-trash"></i>
+                            Xóa tất cả
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="cart-right">
+
+                    <h2>Tóm tắt đơn hàng</h2>
+
+                    <div class="summary-row">
+
+                        <span>Tạm tính</span>
+
+                        <span id="subtotal">
+                            0 đ
+                        </span>
+
+                    </div>
+
+                    <div class="summary-row">
+
+                        <span>Phí giao hàng</span>
+
+                        <span class="free">
+                            Miễn phí
+                        </span>
+
+                    </div>
+
+                    <div class="summary-total">
+
+                        <span>Tổng cộng</span>
+
+                        <span id="total">
+                            0 đ
+                        </span>
+
+                    </div>
+
+                    <button class="checkout-btn">
+
+                        <i class="fa-solid fa-truck"></i>
+                        Đặt hàng ngay
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<script>
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let cartContainer = document.querySelector(".cart-items");
+
+    let subtotal = document.getElementById("subtotal");
+
+    let total = document.getElementById("total");
+
+    function renderCart(){
+
+        cartContainer.innerHTML = "";
+
+        let totalPrice = 0;
+
+        if(cart.length === 0){
+
+            cartContainer.innerHTML = `
+            
+            <div class="empty-cart">
+                Giỏ hàng đang trống
+            </div>
+            
+            `;
+
+            subtotal.innerText = "0 đ";
+            total.innerText = "0 đ";
+
+            return;
+        }
+
+        cart.forEach((item, index) => {
+
+            let itemTotal = item.price * item.quantity;
+
+            totalPrice += itemTotal;
+
+            cartContainer.innerHTML += `
+            
+            <div class="cart-item">
+
+                <div class="cart-name">
+
+                    <h3>${item.name}</h3>
+
+                </div>
+
+                <div class="cart-price">
+
+                    ${item.price.toLocaleString()} đ
+
+                </div>
+
+                <div class="cart-quantity">
+
+                    <button onclick="decreaseQuantity(${index})">
+                        -
+                    </button>
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+                    <button onclick="increaseQuantity(${index})">
+                        +
+                    </button>
+
+                </div>
+
+                <div class="cart-total-item">
+
+                    ${itemTotal.toLocaleString()} đ
+
+                </div>
+
+            </div>
+            
+            `;
+        });
+
+        subtotal.innerText =
+        totalPrice.toLocaleString() + " đ";
+
+        total.innerText =
+        totalPrice.toLocaleString() + " đ";
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function increaseQuantity(index){
+
+        cart[index].quantity++;
+
+        renderCart();
+    }
+
+    function decreaseQuantity(index){
+
+        if(cart[index].quantity > 1){
+
+            cart[index].quantity--;
+
+        }
+        else{
+
+            cart.splice(index, 1);
+        }
+
+        renderCart();
+    }
+
+    function clearCart(){
+
+        localStorage.removeItem("cart");
+
+        cart = [];
+
+        renderCart();
+    }
+
+    renderCart();
+
+</script>
+
+</body>
+</html>
